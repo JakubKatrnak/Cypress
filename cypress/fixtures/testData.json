@@ -5,5 +5,10 @@
         "width" : 400,
         "filepath" : "cypress/test_files/png.png",
         "filename" : "png.png"
+    },
+
+    "canvas": {
+        "comparefile": "cypress/test_files/expected_export.png",
+        "exportedfile": "cypress/downloads/New Project.png"
     }
 }

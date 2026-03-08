@@ -32,7 +32,7 @@ describe('Start a new project', () => {
       .clear()
       .type(data.project.height);
 
-      // create projecct
+      // create project
       cy.get('.spread').click();
 
       // check if project was created and test data
@@ -70,6 +70,5 @@ describe('Start a new project', () => {
     cy.checkProjectCreation(data.project.filename);
 
   })
-
 
 })
