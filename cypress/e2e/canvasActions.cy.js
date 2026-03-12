@@ -1,4 +1,5 @@
 import '../support/commands.js';
+import data from '../fixtures/testData.json';
 
 describe('Testing Canvas Actions', () => {
 
@@ -37,6 +38,16 @@ describe('Testing Canvas Actions', () => {
     cy.get('.contextpanel.cp_light').contains('Export as').click();
     cy.get('.contextpanel.cp_light').eq(1).contains('PNG').click();
     cy.get('.fitem.bbtn').contains('Save').click();
+
+    // compare image
+    cy.task('compareImages', {imgExport: data.canvas.exportedfile,imgExpected: data.canvas.comparefile}).then((imgDif) =>{
+
+      expect(
+        imgDif,
+      ).to.equal(0);
+
+    })
+
 
   })
 

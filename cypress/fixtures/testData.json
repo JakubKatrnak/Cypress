@@ -8,7 +8,7 @@
     },
 
     "canvas": {
-        "comparefile": "cypress/test_files/expected_export.png",
+        "comparefile": "cypress/test_files/expected_export_pass.png",
         "exportedfile": "cypress/downloads/New Project.png"
     }
 }
